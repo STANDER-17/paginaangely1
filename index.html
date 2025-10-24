@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡ESTO ES PARA TI DANAE MI PRECIOSA! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bienvenida-page">
+    <div class="card-form">
+        <h1>¡ESTO ES PARA TI DANAE MI PRECIOSA! ❤️</h1>
+        <div class="form-container">
+            <h2>Bienvenida ❤️</h2>
+            <form id="entradaForm">
+                <input type="text" placeholder="Escribe tu nombre" required>
+                <input type="text" placeholder="¿En que juego nos conocimos?" required>
+                <input type="number" placeholder="¿Dia de tu cumpleaños?" required>
+                <input type="text" placeholder="Escribe tu color favorito" required>
+                <button type="submit" class="btn-entrar">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Script para la redirección al presionar "Entrar"
+        document.getElementById('entradaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Detiene el envío del formulario
+            // Redirige a la página principal del aniversario
+            window.location.href = 'aniversario.html'; 
+        });
+    </script>
+</body>
+</html>

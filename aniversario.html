@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversario Mi Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="aniversario-page">
+
+    <header class="aniversario-header">
+        <p class="fecha-aniversario">23 de octubre del 2025</p>
+        <p class="mensaje-aniversario">FELIZ DE CONOCERTE MI AMOR</p>
+    </header>
+
+    <div id="sobre-seccion" class="sobre-seccion"> 
+        <div class="sobre-container">
+            <div class="sobre">
+                <i class="fas fa-envelope-open-text"></i>
+                <i class="fas fa-heart corazon-sobre"></i>
+            </div>
+            <button id="abrirBtn" class="btn-abrir">Abrir</button>
+        </div>
+        
+        <div class="poema-contenedor">
+            <h3 class="poema-titulo">Para Ti, Preciosa ❤️</h3>
+            <p>
+                Te pienso en cada rayo del día, <br>
+                como el sol que a la luna envía <br>
+                un suspiro tuyo es fuego y calma, <br>
+                que en silencio acaricia los fragmentos de mi alma.<br>
+                <br>
+                Tu mirada, que refleja el azul del cielo, <br>
+                me envuelve con tu dulce desvelo,<br>
+                y en tus labios encuentro el calor y el abrigo <br>
+                que convierte el dolor en dulce cariño.<br>
+                <br>
+                Si te tengo, no existe el invierno, <br>
+                ni el temor de un destino alterno,<br>
+                porque tú eres mi norte y mi estrella, <br>
+                mi razón, mi canción más bella.
+            </p>
+        </div>
+        
+    </div>
+    <div id="contenido-sorpresa" class="contenido-sorpresa oculto">
+
+        <div class="galeria-fotos">
+            <img src="dana1.jpg" alt="Foto de la pareja 1">
+            <img src="dana2.jpg" alt="Foto de la pareja 2">
+            <img src="dana3.jpg" alt="Foto de la pareja 3">
+            <img src="dana4.jpg" alt="Foto de la pareja 4">
+            <img src="dana5.jpg" alt="Foto de la pareja 4">
+            <img src="dana6.jpg" alt="Foto de la pareja 4">
+            <img src="dana7.jpg" alt="Foto de la pareja 4">
+            <img src="dana8.jpg" alt="Foto de la pareja 4">
+        </div>
+        <div class="linea-tiempo-container">
+            <p class="titulo-timeline">Nuestro Amor, Paso a Paso ❤️</p>
+            <div class="timeline">
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span>Jugando free fire te conoci - 2024</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span>Llamadas, amanecidas y risas - 2024</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span>Mas cariño y confianza conoci a la chica "Que te pasaaaa... la mas hermosa" - 2024</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span>Nuestro presente feliz - 2025</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="video-container">
+            <h2>Este video es dedicado para ti ❤️</h2>
+            <div class="video-container">
+    
+    <iframe 
+        id="videoYoutube" 
+        width="100%" 
+        height="315" 
+        src=""  frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+        </div>
+    </div> 
+
+    <script>
+    // URL completa del video con autoplay, lista para ser insertada
+    const VIDEO_URL = "https://www.youtube.com/embed/q16TcxjAgAc?rel=0&autoplay=1";
+    
+    document.getElementById('abrirBtn').addEventListener('click', function() {
+        
+        // 1. Oculta el sobre y el poema
+        document.getElementById('sobre-seccion').classList.add('oculto'); 
+        
+        // 2. Muestra la sorpresa (fotos, línea de tiempo, video)
+        document.getElementById('contenido-sorpresa').classList.remove('oculto'); 
+        
+        // 3. ¡Solución Final para el Autoplay! 
+        // Solo ahora insertamos la URL en el iframe
+        var iframe = document.getElementById('videoYoutube');
+        iframe.src = VIDEO_URL;
+        
+        // 4. Desplázate al inicio
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
